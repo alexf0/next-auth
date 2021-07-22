@@ -101,7 +101,7 @@ export default function signin({
                   </div>
                 )
               })}
-              <button type="submit">Sign in with {provider.name}</button>
+              <button type="submit">{provider.signinButtonText ? provider.signinButtonText : `Sign in with ${provider.name}`}</button>
             </form>
           )}
           {(provider.type === "email" || provider.type === "credentials") &&
